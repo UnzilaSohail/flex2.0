@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 2,
+  "agentName": "UNZILA-09",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus5.actions.githubusercontent.com/KxVVtrGSfXsuD8LgJdIhwVNAbh3nacIXtS570IzaYgD8xHQPan/",
+  "gitHubUrl": "https://github.com/UnzilaSohail/flex2.0",
+  "workFolder": "_work"
+}

@@ -13,17 +13,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Set up Docker to use Minikube's environment
     - name: Set up Docker to use Minikube's environment
       run: |
-        # Start Minikube if it's not already running
-        minikube start --driver=docker
-        
-        # Export Docker environment variables for Minikube to use
-        echo "export DOCKER_TLS_VERIFY='1'" >> $GITHUB_ENV
-        echo "export DOCKER_HOST='tcp://$(minikube ip):2376'" >> $GITHUB_ENV
-        echo "export DOCKER_CERT_PATH=$(minikube docker-env | grep DOCKER_CERT_PATH | sed 's/^.*=//')" >> $GITHUB_ENV
-        echo "export DOCKER_MACHINE_NAME=minikube" >> $GITHUB_ENV
+        minikube docker-env
 
     # Build frontend image
     - name: Build Frontend Docker Image

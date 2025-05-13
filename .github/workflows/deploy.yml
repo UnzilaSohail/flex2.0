@@ -15,7 +15,7 @@ jobs:
 
     - name: Set up Docker to use Minikube's environment
       run: |
-        eval $(minikube docker-env)
+        minikube docker-env
 
     # Build frontend image
     - name: Build Frontend Docker Image
